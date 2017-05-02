@@ -1,6 +1,3 @@
-/**
- * Created by alanzhang on 17/4/25.
- */
 import VueLadda from './vue-ladda.vue';
 
 const installer = {

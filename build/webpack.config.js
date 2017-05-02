@@ -7,7 +7,6 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'vue-ladda.js'
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -27,17 +26,16 @@ module.exports = {
     ]
   },
   plugins:[
-    // TODO: move to prod config file
-    //new webpack.optimize.UglifyJsPlugin({
-    //  beautify: false,
-    //  mangle: {
-    //    screw_ie8: true,
-    //    keep_fnames: true
-    //  },
-    //  compress: {
-    //    screw_ie8: true
-    //  },
-    //  comments: false
-    //})
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true
+      },
+      compress: {
+        screw_ie8: true
+      },
+      comments: false
+    })
   ]
 };
