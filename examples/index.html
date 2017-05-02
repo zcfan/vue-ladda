@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="../dist/vue-ladda.js"></script>
+
+  <style>
+    button { outline: none; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <vue-ladda v-for="(button, index) in buttons"
+               :key="index"
+               :loading="button.loading"
+               :data-style="button.dataStyle"
+               @click="submit(button)">
+    </vue-ladda>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: function() {
+        return {
+          buttons: [
+            {
+              loading: false,
+              'dataStyle': 'expand-left'
+            },
+            {
+              loading: false,
+              'dataStyle': 'expand-up'
+            },
+            {
+              loading: false,
+              // TODO: fix this style.
+              'dataStyle': 'expand-overlay'
+            }
+          ]
+        }
+      },
+      methods: {
+        submit: function(button) {
+          button.loading = true;
+          setTimeout(function() {
+            button.loading = false;
+          }, 2000);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

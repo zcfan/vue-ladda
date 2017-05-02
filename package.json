@@ -1,0 +1,36 @@
+{
+  "name": "vue-ladda",
+  "version": "0.0.1",
+  "description": "A vue component wrapper of Ladda button.",
+  "main": "dist/vue-ladda.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github./..."
+  },
+  "keywords": [
+    "vue",
+    "ladda",
+    "button",
+    "loading",
+    "indicator"
+  ],
+  "author": "Alan Zhang",
+  "license": "MIT",
+  "dependencies": {
+    "ladda": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "css-loader": "^0.28.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.2.6",
+    "webpack": "^2.4.1"
+  }
+}
