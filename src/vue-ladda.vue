@@ -8,7 +8,7 @@
   import Ladda from 'ladda';
 
   export default {
-    name: 'LaddaButton',
+    name: 'VueLadda',
 
     props: {
       dataStyle: {
