@@ -6,7 +6,8 @@
   "main": "src/vue-ladda.vue",
   "browser": "dist/vue-ladda.js",
   "scripts": {
-    "build": "webpack --config ./build/webpack.config.js"
+    "build": "webpack --config ./build/webpack.config.js",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,12 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "css-loader": "^0.28.0",
+    "jasmine-core": "^2.6.1",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^0.1.6",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "^2.0.3",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
     "vue-loader": "^11.3.4",
