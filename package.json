@@ -1,14 +1,16 @@
 {
   "name": "vue-ladda",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A vue component wrapper of Ladda button.",
-  "main": "dist/vue-ladda.js",
+  "homepage": "https://github.com/zcfan/vue-ladda",
+  "main": "src/vue-ladda.vue",
+  "browser": "dist/vue-ladda.js",
   "scripts": {
-    "test": "test"
+    "build": "webpack --config ./build/webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "http://github./..."
+    "url": "https://github.com/zcfan/vue-ladda"
   },
   "keywords": [
     "vue",
@@ -17,7 +19,11 @@
     "loading",
     "indicator"
   ],
-  "author": "Alan Zhang",
+  "author": {
+    "name": "Alan Zhang",
+    "email": "gagazcfan@icloud.com",
+    "web": "http://alanslab.space"
+  },
   "license": "MIT",
   "dependencies": {
     "ladda": "^1.0.0"

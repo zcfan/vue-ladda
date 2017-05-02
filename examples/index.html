@@ -16,6 +16,7 @@
                :key="index"
                :loading="button.loading"
                :data-style="button.dataStyle"
+               :progress="button.progress"
                @click="submit(button)">
     </vue-ladda>
   </div>
@@ -28,15 +29,19 @@
           buttons: [
             {
               loading: false,
-              'dataStyle': 'expand-left'
+              'dataStyle': 'expand-left',
+              progress: 0,
+
             },
             {
               loading: false,
-              'dataStyle': 'expand-up'
+              'dataStyle': 'expand-up',
+              progress: 0
             },
             {
               loading: false,
-              'dataStyle': 'contract-overlay'
+              'dataStyle': 'contract-overlay',
+              progress: 0
             }
           ]
         }
@@ -44,12 +49,31 @@
       methods: {
         submit: function(button) {
           button.loading = true;
+          updateButtonProgress(2000, button);
+
           setTimeout(function() {
             button.loading = false;
           }, 2000);
         }
       }
     });
+
+
+    function updateButtonProgress(duration, button) {
+      var start = null;
+      function update(timestamp) {
+        var delta, progress;
+
+        if (!start) start = timestamp;
+        delta = timestamp - start;
+        progress = delta / duration;
+        if (progress >= 1 || progress < 0) return;
+        button.progress = progress;
+        window.requestAnimationFrame(update);
+      }
+
+      window.requestAnimationFrame(update);
+    }
   </script>
 </body>
 </html>
