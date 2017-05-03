@@ -25,11 +25,10 @@ npm install vue-ladda
 ```
 
 ```javascript
-// Import the vue single file component, if you set vue-loader and sass preprocessor properly:
 import VueLadda from 'vue-ladda'
 
-// or import the prebuilt js file
-import VueLadda from 'vue-ladda/dist/vue-ladda.js'
+// or import the vue single file component, if you set vue-loader, sass-loader and babel properly.
+import VueLadda from 'vue-ladda/src/vue-ladda.vue'
 
 // then register it globally
 Vue.component('vue-ladda', VueLadda)
@@ -72,5 +71,9 @@ new Vue({
     ```
     
 - Use `progress` prop to control the ladda built-in progress bar. (0 to 1)
+
+    ```html
+    <vue-ladda :progress="0-1">...</vue-ladda>
+    ```
 
 See [examples/index.html](examples/index.html) for some example.

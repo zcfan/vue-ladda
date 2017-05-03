@@ -6,6 +6,8 @@ var merge = require('webpack-merge');
 module.exports = merge(baseConfig, {
   entry: './src/index.js',
   output: {
+    library: 'VueLadda',
+    libraryTarget: 'umd',
     path: path.resolve(__dirname, '../dist'),
     filename: 'vue-ladda.js'
   },

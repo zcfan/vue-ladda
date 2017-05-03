@@ -1,10 +1,9 @@
 {
   "name": "vue-ladda",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A vue component wrapper of Ladda button.",
   "homepage": "https://github.com/zcfan/vue-ladda",
-  "main": "src/vue-ladda.vue",
-  "browser": "dist/vue-ladda.js",
+  "main": "dist/vue-ladda.js",
   "scripts": {
     "build": "webpack --config ./build/webpack.prod.config.js",
     "test": "karma start"
@@ -27,7 +26,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "ladda": "^1.0.0"
+    "ladda": "^1.0.0",
+    "vue-loader": "^11.3.4"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -42,6 +42,7 @@
     "karma-webpack": "^2.0.3",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
+    "vue": "^2.3.2",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.4.1",
