@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Ladda from 'ladda';
+  import Ladda from 'ladda/js/ladda';
 
   export default {
     name: 'VueLadda',
@@ -16,7 +16,7 @@
         type: String,
         default: 'expand-left'
       },
-      // loading prop is the only way to change the status of this component.
+      // loading prop to change the status of this component.
       loading: {
         type: Boolean,
         required: true

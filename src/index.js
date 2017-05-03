@@ -2,11 +2,11 @@ import VueLadda from './vue-ladda.vue';
 
 const installer = {
   install(Vue, options) {
-    Vue.component('vue-ladda', VueLadda)
+    Vue.component('vue-ladda', VueLadda);
   }
 };
 
-const inBrowser = typeof window !== 'undefined'
+const inBrowser = typeof window !== 'undefined';
 if (inBrowser && window.Vue) {
   window.Vue.use(installer);
 }
