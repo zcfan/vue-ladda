@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>vue-ladda example</title>
 
-  <script src="https://unpkg.com/vue@2.3.2/dist/vue.runtime.min.js"></script>
+  <script src="https://unpkg.com/vue@2.3.2/dist/vue.min.js"></script>
   <script src="../dist/vue-ladda.js"></script>
 
   <style>
@@ -13,12 +13,18 @@
 </head>
 <body>
   <div id="app">
+    <vue-ladda v-for="(button, index) in buttons"
+               :key="index"
+               :loading="button.loading"
+               :data-style="button.dataStyle"
+               :progress="button.progress"
+               @click="submit(button)">
+    </vue-ladda>
   </div>
 
   <script>
     var app = new Vue({
       el: '#app',
-
       data: function() {
         return {
           buttons: [
@@ -41,24 +47,6 @@
           ]
         }
       },
-
-      // we're using runtime only build here
-      render: function(h) {
-        var that = this
-        return h('div', {}, this.buttons.map(function(button) {
-          return h('vue-ladda', {
-            props: {
-              loading: button.loading,
-              "data-style": button.dataStyle,
-              progress: button.progress
-            },
-            on: {
-              click: function() { that.submit(button) }
-            }
-          })
-        }));
-      },
-
       methods: {
         submit: function(button) {
           button.loading = true;
@@ -70,6 +58,7 @@
         }
       }
     });
+
 
     function updateButtonProgress(duration, button) {
       var start = null;
