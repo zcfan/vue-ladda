@@ -1,4 +1,4 @@
-var webpackConfig = require('./build/webpack.config');
+var webpackTestConfig = require('./build/webpack.test.config');
 
 module.exports = function(config) {
   config.set({
@@ -16,9 +16,6 @@ module.exports = function(config) {
 
     singleRun: true,
 
-    webpack: {
-      module: webpackConfig.module,
-      plugins: webpackConfig.plugins
-    }
+    webpack: webpackTestConfig
   });
 };

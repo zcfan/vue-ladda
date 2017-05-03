@@ -6,7 +6,7 @@
   "main": "src/vue-ladda.vue",
   "browser": "dist/vue-ladda.js",
   "scripts": {
-    "build": "webpack --config ./build/webpack.config.js",
+    "build": "webpack --config ./build/webpack.prod.config.js",
     "test": "karma start"
   },
   "repository": {
@@ -44,6 +44,7 @@
     "sass-loader": "^6.0.3",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "webpack-merge": "^4.1.0"
   }
 }
