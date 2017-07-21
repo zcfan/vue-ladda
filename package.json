@@ -8,7 +8,7 @@
     "build-js": "webpack --config ./build/webpack.prod.config.js",
     "build-doc": "cp dist/vue-ladda.js docs/",
     "test": "karma start",
-    "publish": "npm run test && npm run build-js && npm run build-doc && git push && npm version patch && git push --tags && npm publish"
+    "publish-patch": "npm run test && npm run build-js && npm run build-doc && git push && npm version patch && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
