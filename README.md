@@ -2,6 +2,10 @@
 
 A vue wrapper for https://github.com/hakimel/Ladda .
 
+[Demo](http://blog.alanslab.space/vue-ladda/)
+
+[Demo source code](examples/index.html)
+
 ## Installation
 
 ### Direct Download / CDN
@@ -61,19 +65,17 @@ new Vue({
       ...
     </vue-ladda>
     ```
-    
+
     Visit [http://lab.hakim.se/ladda/](http://lab.hakim.se/ladda/) to get a full options of data-style.
 
 - Use `loading` prop to control button status:
-    
+
     ```html
     <vue-ladda loading="true|false">...</vue-ladda>
     ```
-    
+
 - Use `progress` prop to control the ladda built-in progress bar. (0 to 1)
 
     ```html
     <vue-ladda :progress="0-1">...</vue-ladda>
     ```
-
-See [examples/index.html](examples/index.html) for some example.
