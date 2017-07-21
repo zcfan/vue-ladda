@@ -4,7 +4,7 @@ A vue wrapper for https://github.com/hakimel/Ladda .
 
 [Demo](http://blog.alanslab.space/vue-ladda/)
 
-[Demo source code](examples/index.html)
+[Demo source code](docs/index.html)
 
 ## Installation
 
