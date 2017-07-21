@@ -23,7 +23,7 @@
       },
       progress: {
         validator: function(progress) {
-          return progress >= 0 && progress <= 1
+          return progress >= 0 && progress <= 1;
         },
         default: 0
       }
@@ -35,26 +35,26 @@
       },
 
       progress: function(progress) {
-        this.ladda.setProgress(progress)
+        this.ladda.setProgress(progress);
       }
     },
 
     methods: {
       handleClick: function(e) {
-        this.$emit('click', e)
+        this.$emit('click', e);
       }
     },
 
     mounted: function() {
-      const l = Ladda.create(this.$refs.ladda);
-      this.ladda = l;
+      this.ladda = Ladda.create(this.$refs.ladda);
       this.loading ? this.ladda.start() : this.ladda.stop();
     },
 
     beforeDestroy: function() {
       this.ladda.remove();
+      delete this.ladda;
     }
-  }
+  };
 </script>
 
 <style lang="scss">

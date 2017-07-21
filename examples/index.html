@@ -49,12 +49,14 @@
       },
       methods: {
         submit: function(button) {
+          const duration = 2000;
+
           button.loading = true;
-          updateButtonProgress(2000, button);
+          updateButtonProgress(duration, button);
 
           setTimeout(function() {
             button.loading = false;
-          }, 2000);
+          }, duration);
         }
       }
     });
