@@ -5,8 +5,10 @@
   "homepage": "https://github.com/zcfan/vue-ladda",
   "main": "dist/vue-ladda.js",
   "scripts": {
-    "build": "webpack --config ./build/webpack.prod.config.js",
-    "test": "karma start"
+    "build-js": "webpack --config ./build/webpack.prod.config.js",
+    "build-doc": "cp dist/vue-ladda.js docs/",
+    "test": "karma start",
+    "publish": "npm run test && npm run build-js && npm run build-doc && npm version patch && git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
