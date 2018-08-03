@@ -58,6 +58,13 @@ new Vue({
     <vue-ladda>Confirm</vue-ladda>
     ```
 
+- Use `buttonClass` prop to specify your own CSS classes: (Default is "ladda-class")
+    ie. you can use Bootstrap button classes
+
+    ```html
+    <vue-ladda button-class="btn btn-primary">Yes!</vue-ladda>
+    ```
+
 - Use `data-style` prop to specify animation:
 
     ```html
