@@ -13,7 +13,14 @@ describe('VueLadda', () => {
 
   it('sets the correct default data', () => {
     const vm = new Ctor().$mount();
+    expect(vm.buttonClass).toBe('ladda-class');
     expect(vm.dataStyle).toBe('expand-left');
     expect(vm.progress).toBe(0);
+  });
+
+  it('test custom button class', () => {
+    let bsClasses = 'btn btn-primary'
+    const vm = new Ctor({propsData: {buttonClass: bsClasses}}).$mount();
+    expect(vm.buttonClass).toBe(bsClasses)
   });
 });
