@@ -11,10 +11,10 @@
     name: 'VueLadda',
 
     props: {
-      // customizable button's class attribute - you can use your own CSS class 
+      // customizable button's class attribute - you can use your own CSS class
       'buttonClass': {
         type: String,
-        default: 'ladda-class'
+        default: 'ladda-button'
       },
       // use vue props validation to make sure "data-style" is given. (ladda need it)
       'dataStyle': {
