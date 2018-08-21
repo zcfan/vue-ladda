@@ -13,7 +13,7 @@ describe('VueLadda', () => {
 
   it('sets the correct default data', () => {
     const vm = new Ctor().$mount();
-    expect(vm.buttonClass).toBe('ladda-class');
+    expect(vm.buttonClass).toBe('ladda-button');
     expect(vm.dataStyle).toBe('expand-left');
     expect(vm.progress).toBe(0);
   });
