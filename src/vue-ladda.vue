@@ -13,7 +13,7 @@
     props: {
       // customizable button's class attribute - you can use your own CSS class
       'buttonClass': {
-        type: String,
+        type: [String, Object],
         default: 'ladda-button'
       },
       // use vue props validation to make sure "data-style" is given. (ladda need it)
